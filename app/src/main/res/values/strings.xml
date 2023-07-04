@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Cardiac Recorder</string>
+    <string name="open"></string>
+    <string name="close"></string>
 </resources>

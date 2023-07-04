@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+
+        <item android:title="Task">
+            <menu>
+
+                <item
+                    android:id="@+id/mHome"
+                    android:icon="@drawable/ic_baseline_menu_24"
+                    android:title="Home" />
+
+                <item
+                    android:id="@+id/mProfile"
+                    android:icon="@drawable/ic_baseline_menu_24"
+                    android:title="Profile" />
+
+
+
+            </menu>
+
+        </item>
+
+    </group>
+
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item android:title="More App">
+
+            <menu>
+
+                <item
+                    android:id="@+id/mPolicy"
+                    android:icon="@drawable/ic_baseline_menu_24"
+                    android:title="Policy" />
+                <item
+                    android:id="@+id/mAbout_App"
+                    android:icon="@drawable/ic_baseline_menu_24"
+                    android:title="About App" />
+            </menu>
+
+        </item>
+
+    </group>
+
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single">
+        <item android:title="Exit">
+
+            <menu>
+
+
+                <item
+                    android:id="@+id/mlog_out"
+                    android:icon="@drawable/ic_baseline_logout_24"
+                    android:title="Log Out" />
+            </menu>
+
+        </item>
+
+    </group>
+
+</menu>
