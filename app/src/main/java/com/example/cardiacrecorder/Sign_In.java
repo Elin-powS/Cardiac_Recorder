@@ -217,6 +217,126 @@ public class Sign_In extends AppCompatActivity {
                     }
                 });
 
+                alertDialog.setNegativeButton("Upadte", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        Dialog Udialog = new Dialog(Sign_In.this);
+                        Udialog.setContentView(R.layout.update_layout);
+
+                        systolic_pressure=(EditText) Udialog.findViewById(R.id.usp);
+                        diastolic_pressure=(EditText)Udialog.findViewById(R.id.udp);
+                        heart_rate=(EditText)Udialog.findViewById(R.id.uhr);
+
+                        Button button_up = Udialog.findViewById(R.id.button_update);
+
+                        button_up.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                                int y=1;
+                                String Systolic_Pressure = systolic_pressure.getText().toString().trim();
+                                String Diastolic_Pressure =  diastolic_pressure.getText().toString().trim();
+                                String Heart_Rate = heart_rate.getText().toString().trim();
+
+
+                                int S_P =0, D_P = 0, H_R = 0;
+
+                                try {
+                                    S_P = Integer.parseInt(Systolic_Pressure);
+                                    D_P = Integer.parseInt(Diastolic_Pressure);
+                                    H_R = Integer.parseInt(Heart_Rate);
+                                }catch (Exception ignored){}
+
+
+                                if(Systolic_Pressure.isEmpty()){
+                                    systolic_pressure.setError("Required!");
+                                    systolic_pressure.requestFocus();
+                                    y=0;
+                                    return;
+                                }
+                                if(S_P>200 || S_P<80 ){
+                                    systolic_pressure.setError("Invalid!");
+                                    systolic_pressure.requestFocus();
+                                    y=0;
+                                    return;
+                                }
+
+                                if(Diastolic_Pressure.isEmpty()){
+                                    diastolic_pressure.setError("Required!");
+                                    diastolic_pressure.requestFocus();
+                                    y=0;
+                                    return;
+                                }
+
+                                if(D_P>120|| D_P<40){
+                                    diastolic_pressure.setError("Invalid!");
+                                    diastolic_pressure.requestFocus();
+                                    y=0;
+                                    return;
+                                }
+
+                                if(Heart_Rate.isEmpty()){
+                                    heart_rate.setError("Required!");
+                                    heart_rate.requestFocus();
+                                    y=0;
+                                    return;
+                                }
+
+                                if(H_R>200 || H_R<40){
+                                    heart_rate.setError("Invalid!");
+                                    heart_rate.requestFocus();
+                                    y=0;
+                                    return;
+                                }
+
+
+
+                                if(S_P<90 && D_P<60) {
+                                    Status="Low Blood Pressure.";
+                                }
+                                else if(S_P<120 && D_P<80) {
+                                    Status="Normal.";
+                                }
+
+                                else if((S_P<130 || S_P>119) && (D_P<80)) {
+                                    Status="ELEVATED.";
+                                }
+                                else if((S_P<140 || S_P>129) && (D_P<90 && D_P>=80)) {
+                                    Status="Stage 1 Hypertension.";
+                                }
+                                else if(S_P>=140 && D_P>=90){
+                                    Status="Stage 2 Hypertension.";
+                                }else if(S_P>=180 && D_P>120){
+                                    Status="Hypertension Crisis.";
+                                }
+                                else {
+                                    Status="Undefine.";
+                                }
+
+                                if(y==1){
+
+                                    firebaseuser = FirebaseAuth.getInstance().getCurrentUser();
+                                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("user");
+
+                                    reference.child(firebaseuser.getUid()).child("Health Information").child(key).child("diastolic_pressure").setValue(Diastolic_Pressure);
+                                    reference.child(firebaseuser.getUid()).child("Health Information").child(key).child("systolic_pressure").setValue(Systolic_Pressure);
+                                    reference.child(firebaseuser.getUid()).child("Health Information").child(key).child("heart_rate").setValue(Heart_Rate);
+                                    reference.child(firebaseuser.getUid()).child("Health Information").child(key).child("Status").setValue(Status);
+
+                                    Toast.makeText(Sign_In.this, "Information Update Successfully Done.", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(Sign_In.this, Sign_In.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
+
+                            }
+                        });
+                        Udialog.setCancelable(true);
+                        Udialog.show();
+
+                    }
+                });
 
 
                 alertDialog.setNeutralButton("Exit", new DialogInterface.OnClickListener() {
