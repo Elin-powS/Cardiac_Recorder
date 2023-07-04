@@ -1,6 +1,310 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:layout_margin="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="370dp"
+        android:layout_height="357dp"
+        android:layout_gravity="center"
+        app:cardUseCompatPadding="true"
+        android:background="@color/BGC"
+        app:cardCornerRadius="13dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/health_info"
+            android:layout_width="355dp"
+            android:layout_height="match_parent"
+            android:background="@color/BGC"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="353dp"
+                android:layout_height="120dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/text_border">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="77.5dp"
+                    android:background="@drawable/heart"
+                    android:gravity="center"
+                    android:layout_margin="9dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="252.5dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/text_border">
+
+                    <LinearLayout
+                        android:layout_width="250dp"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="@drawable/text_border">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:text="Date:"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="22dp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="150dp"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            android:textStyle="bold"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="250dp"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="@drawable/text_border">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:text="Time:"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="22dp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="150dp"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="353dp"
+                android:layout_height="110dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/text_border">
+
+                <LinearLayout
+                    android:layout_width="175dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_margin="5dp"
+                        android:layout_width="65dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/diastolic"
+                        android:layout_gravity="center"/>
+
+
+                    <LinearLayout
+                        android:layout_width="98dp"
+                        android:layout_height="110dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/text_border">
+                        <TextView
+                            android:layout_width="97dp"
+                            android:layout_height="55dp"
+                            android:text="Diastolic Pressure"
+                            android:background="@drawable/text_border"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="17dp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="97dp"
+                            android:layout_height="55dp"
+                            android:id="@+id/dp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="22dp"
+                            android:textStyle="bold"/>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="176dp"
+                    android:layout_height="110dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_margin="5dp"
+                        android:layout_width="65dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/systolic"
+                        android:layout_gravity="center"/>
+
+                    <LinearLayout
+                        android:layout_width="101dp"
+                        android:layout_height="110dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/text_border">
+                        <TextView
+                            android:layout_width="101dp"
+                            android:layout_height="55dp"
+                            android:text="Systolic Pressure"
+                            android:background="@drawable/text_border"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="17dp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="97dp"
+                            android:layout_height="55dp"
+                            android:id="@+id/sp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="22dp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="353dp"
+                android:layout_height="110dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/text_border">
+
+
+                <LinearLayout
+                    android:layout_width="175dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_margin="5dp"
+                        android:layout_width="65dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/heart_rate"
+                        android:layout_gravity="center"
+                        />
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="110dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/text_border">
+
+                        <TextView
+                            android:layout_width="97dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/text_border"
+                            android:gravity="center"
+                            android:text="Heart Rate"
+                            android:textColor="@color/white"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="97dp"
+                            android:layout_height="55dp"
+                            android:id="@+id/hr"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="22dp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="176dp"
+                    android:layout_height="110dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_margin="5dp"
+                        android:layout_width="65dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/heart_condition" />
+
+                    <LinearLayout
+                        android:layout_width="101dp"
+                        android:layout_height="110dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/text_border">
+                        <TextView
+                            android:layout_width="101dp"
+                            android:layout_height="55dp"
+                            android:text="Status"
+                            android:background="@drawable/text_border"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="19dp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="97dp"
+                            android:layout_height="55dp"
+                            android:id="@+id/status"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:layout_margin="3dp"
+                            android:textSize="13dp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
