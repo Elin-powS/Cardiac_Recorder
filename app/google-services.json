@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "789747197765",
+    "firebase_url": "https://cardiac-recorder-5cced-default-rtdb.firebaseio.com",
+    "project_id": "cardiac-recorder-5cced",
+    "storage_bucket": "cardiac-recorder-5cced.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789747197765:android:f0efa49a48b29c1f08c02c",
+        "android_client_info": {
+          "package_name": "com.example.cardiacrecorder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789747197765-huituohg7m20hfr6e3m4jdikqdr2mjli.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgx5OFWHNXo-WUZABAEXZSI_dytPwE7Ks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "789747197765-huituohg7m20hfr6e3m4jdikqdr2mjli.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789747197765:android:65911400784e82dd08c02c",
+        "android_client_info": {
+          "package_name": "com.example.cardiacrecorderapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789747197765-huituohg7m20hfr6e3m4jdikqdr2mjli.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgx5OFWHNXo-WUZABAEXZSI_dytPwE7Ks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "789747197765-huituohg7m20hfr6e3m4jdikqdr2mjli.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
